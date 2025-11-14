@@ -5,17 +5,12 @@
         Explore Articles 🪷
       </h1>
 
-      <SearchBar :query="query" />
-
-      <SearchResults :items="items" :loading="loading" :error="error" />
+    
+      
     </section>
   </div>
 </template>
 
 <script setup>
-import SearchBar from '~/components/SearchBar.vue'
-import SearchResults from '~/components/SearchResults.vue'
-import { useSearch } from '~/composables/useSearch'
 
-const { query, items, loading, error } = useSearch()
 </script>

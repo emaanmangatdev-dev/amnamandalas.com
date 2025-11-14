@@ -4,7 +4,7 @@
       
       <h1 class="text-2xl font-bold text-pink-600 dark:text-pink-300">AmnaMandalas</h1>
 
-      <nav class="flex items-center gap-20 relative text-purple-400">
+      <nav class="flex items-center gap-20 relative text-purple-400 mr-20">
         <NuxtLink to="/" class="hover:text-pink-500 transition">Home</NuxtLink>
 
         <div class="relative group">
@@ -32,20 +32,12 @@
 
         <NuxtLink to="/contact" class="hover:text-pink-500 transition">Contact</NuxtLink>
 
-        <!-- Search bar -->
-        <div class="relative">
-          <input
-            type="text"
-            v-model="search"
-            placeholder="Search..."
-            class="rounded-lg px-3 py-1 text-sm border focus:outline-none focus:ring-2 focus:ring-pink-300 dark:bg-gray-700 dark:text-white"
-          />
-        </div>
+    
 
         <!-- Theme toggle -->
         <button
           @click="toggleTheme"
-          class="ml-3 text-xl text-pink-600 dark:text-pink-300 transition"
+          class="ml-20 text-xl text-pink-600 dark:text-pink-300 transition"
           title="Toggle Theme"
         >
           <span v-if="isDark">🌙</span>
@@ -69,7 +61,6 @@ const categories = [
 
 const isDark = ref(false)
 const isOpen = ref(false)
-const search = ref('')
 
 function toggleTheme() {
   isDark.value = !isDark.value
